@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORKSHOP</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+
+    }
+
+    body {
+      position: relative;
+      width: 100dvw;
+      height: 1000px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background-color: #8DBCC7;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+
+
+
+    h1 {
+      font-size: 3rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 900;
+      letter-spacing: 5px;
+      font-size: clamp(16px, 6dvw, 50px);
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: clamp(10px, 2dvw, 18px);
+      font-family: sans-serif;
+      font-weight: 500;
+
+    }
+
+    .hero-header {
+      position: relative;
+      background-image: url(/photo/peter-thomas-T-33kxpsAlY-unsplash.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: clamp(300px, 50dvh, 100dvh);
+    }
+
+    #navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100dvw;
+      background-color: red;
+      top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-transform: uppercase;
+
+    }
+
+    #sidebar-active {
+      display: none;
+    }
+
+    #navigation .nav-home {
+      position: fixed;
+
+      position: relative;
+      text-decoration: none;
+      margin: 20px;
+      color: black;
+    }
+
+    .header-list {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .header-content {
+      list-style: none;
+      margin: auto;
+      padding: 0 12px;
+
+    }
+
+    .lebel {
+      margin: 10px;
+    }
+
+    .header-content>a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+    .lebel {
+      display: none;
+    }
+
+    @media (max-width:400px) {
+      #navigation {
+        /* right: 0; */
+        height: 100dvh;
+        width: 50%;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translateX(100%);
+
+      }
+      .nav-home{
+        margin: auto;
+        height:50px;
+      }
+
+      .header-list {
+        flex-direction: column;
+        height: inherit;
+        justify-content: space-evenly;
+        background-color: green;
+      }
+
+      .lebel {
+        background-color: cadetblue;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        z-index: 100;
+      }
+      #sidebar-active ~ #navigation{
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero-header" id="home">
+    <input type="checkbox" id="sidebar-active">
+    <label class="lebel" for="sidebar-active">
+      <h1>=</h1>
+    </label>
+
+    <div id="navigation">
+
+      <a href="#home" class="nav-home">home</a>
+
+      <ul class="header-list">
+
+
+        <li class="header-content"><a href="#gallery">gallery</a></li>
+        <li class="header-content"><a href="#about">about</a></li>
+        <li class="header-content"><a href="#contact">contact</a></li>
+
+      </ul>
+    </div>
+
+
+
+    <div class="hero-header-title">
+      <h1>hello world</h1>
+      <p>Hey, this is my homepage, so I have to say something about myself. Sometimes it is hard to introduce yourself
+        because you know yourself so well that you do not know where to start with. Let me give a try to see what kind
+        of image you have about me through my self-description. I hope that my impression about myself and your
+        impression about me are not so different. Here it goes.</p>
+    </div>
+  </section>
+
+
+
+  </div>
+
+</body>
+
+</html>
